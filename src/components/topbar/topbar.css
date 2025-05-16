@@ -1,5 +1,5 @@
-#topbar{
-    height: 5rem !important;
+#topbar {
+    height: 5rem;
     border-width: 0;
     border-bottom-width: 1px;
     border-color: rgba(255,255,255,.09);
@@ -12,36 +12,114 @@
     color: white;
     gap: 1rem;
     justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 .spacer {
     flex-grow: 1;
 }
+
 .spacer-small {
     flex-grow: .2;
 }
-.topbar-a{
-    color:white;
+
+.topbar-a {
+    color: white;
     text-decoration: none;
     pointer-events: visible;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
-.logo{
+
+.logo {
     height: 70%;
     border-radius: 0.3rem;
     aspect-ratio: 3/3;
+    max-height: 3.5rem;
 }
+
 .clogo-link {
-    display: inline-block; /* Ensures the link wraps tightly around the image */
-    line-height: 0; /* Removes extra space below the image */
+    display: inline-block;
+    line-height: 0;
     height: 40%;
 }
-.clogo{
+
+.clogo {
     height: 100%;
     border-radius: 0.3rem;
     aspect-ratio: 1/1;
     opacity: 50%;
     transition: opacity;
     transition-duration: 100ms;
+    max-height: 2rem;
 }
-.clogo:hover{
+
+.clogo:hover {
     opacity: 100%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #topbar {
+        height: 4rem;
+        padding-left: 3%;
+        padding-right: 3%;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        height: 60%;
+        max-height: 2.8rem;
+    }
+
+    .clogo-link {
+        height: 35%;
+    }
+
+    .clogo {
+        max-height: 1.6rem;
+    }
+
+    .topbar-a {
+        font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    }
+
+    .spacer-small {
+        flex-grow: 0.1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #topbar {
+        height: 3.5rem;
+        padding-left: 4%;
+        padding-right: 4%;
+        gap: 0.3rem;
+        flex-wrap: wrap; /* Allow wrapping for very small screens */
+    }
+
+    .logo {
+        height: 50%;
+        max-height: 2.2rem;
+    }
+
+    .clogo-link {
+        height: 30%;
+    }
+
+    .clogo {
+        max-height: 1.2rem;
+    }
+
+    .topbar-a {
+        font-size: clamp(0.7rem, 1.6vw, 0.8rem);
+    }
+
+    .spacer {
+        display: none; /* Hide spacer on very small screens */
+    }
+
+    .spacer-small {
+        display: none;
+    }
 }
