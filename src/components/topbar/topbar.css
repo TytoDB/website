@@ -1,0 +1,47 @@
+#topbar{
+    height: 5rem !important;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: rgba(255,255,255,.09);
+    border-style: solid;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: white;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.spacer {
+    flex-grow: 1;
+}
+.spacer-small {
+    flex-grow: .2;
+}
+.topbar-a{
+    color:white;
+    text-decoration: none;
+    pointer-events: visible;
+}
+.logo{
+    height: 70%;
+    border-radius: 0.3rem;
+    aspect-ratio: 3/3;
+}
+.clogo-link {
+    display: inline-block; /* Ensures the link wraps tightly around the image */
+    line-height: 0; /* Removes extra space below the image */
+    height: 40%;
+}
+.clogo{
+    height: 100%;
+    border-radius: 0.3rem;
+    aspect-ratio: 1/1;
+    opacity: 50%;
+    transition: opacity;
+    transition-duration: 100ms;
+}
+.clogo:hover{
+    opacity: 100%;
+}

@@ -1,0 +1,68 @@
+
+#sidebar{
+    width: 12%;
+    height: 100% !important;
+    border-color: rgba(255,255,255,.09);
+    border-width: 0;
+    border-right-width: 1px;
+    border-style: solid;
+}
+#content{
+    width: 80%;
+    height: 100% !important;
+    color: white;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+#content::-webkit-scrollbar{
+    visibility: hidden;
+}
+#docs-content-holder{
+    width: 100% !important;
+    height: calc(99.9% - 5rem);
+    display: flex;
+}
+#inner-content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    text-justify:inter-word;
+
+}
+thead{
+    background-color: rgba(255,255,255,0.1);
+}
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+#sidebar a {
+    color: rgba(255,255,255,0.5); /* Low contrast */
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    transition: color;
+    transition-duration: 100ms;
+}
+
+#sidebar a.active {
+    color: white; /* High contrast */
+}
+
+#sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#sidebar ul ul {
+    padding-left: 20px;
+}
+
+#sidebar > ul > li > a {
+    font-weight: bold; /* Make top-level (h2) links stand out */
+}

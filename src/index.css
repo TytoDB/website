@@ -1,13 +1,34 @@
-body {
+html, body, #root{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100% !important;
+  background-color: black;
+  font-family: 'Figtree';
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* docs.css */
+pre code.language-alba {
+  font-family: 'Ubuntu Mono','Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+pre code.language-alba::selection{
+  background: rgba(117, 113, 94,0.3);
+  color: #ffffff;
+}
+code{
+  border-radius: 0.3rem;
+}
+.hljs-keyword { color: #f92672; } /* Pink for CREATE, SEARCH */
+.hljs-type { color: #66d9ef; } /* Cyan for SMALL-STRING, INT */
+.hljs-string { color: #a6e22e; } /* Bright green for 'my_nice_container', 'my_name' */
+.hljs-operator { color: #f8f8f2; } /* Light gray for =, &&&> */
+.hljs-punctuation { color: #ffffff; } /* White for [, ], (, ), , */
+.hljs-number { color: #ae81ff; } /* Purple for 9432 */
+.hljs-comment { color: #75715e; } /* Gray for -- comments */
+a{
+  color: #66d9ef
+}
+html::selection {
+  background-color: rgba(255, 255, 255, 0.9); /* 90% transparent WHITE on hover */
+  color: #000000; /* BLACK for contrast on hover */
+  text-decoration: none; /* Optional: remove underline on hover */
 }
